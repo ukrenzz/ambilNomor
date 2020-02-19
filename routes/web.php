@@ -14,3 +14,17 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Route::get('/', 'ParticipantController@index')->name('participant');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::post('/random', 'ParticipantController@randomnumber')->name('random');
+
+Route::resource('/participant','ParticipantController');
